@@ -34,7 +34,7 @@ Example Tree:
 
 For depth first search we can use the call stack (recursion) or the stack ADT (LIFO). You can use an isVisited flag so that you do not end up in an infinite loop.
 
-## Inorder
+### Inorder
 ```javascript
 //returns [1, 2, 5, 5, 10, 15, 22]
 function inOrderTraverse(tree, array) {
@@ -47,7 +47,7 @@ function inOrderTraverse(tree, array) {
 }
 ```
 
-## Preorder
+### Preorder
 ```javascript
 //returns [10, 5, 2, 1, 5, 15, 22]
 function preOrderTraverse(tree, array) {
@@ -60,7 +60,7 @@ function preOrderTraverse(tree, array) {
 }
 ```
 
-## Postorder
+### Postorder
 ```javascript
 //returns [1, 2, 5, 5, 22, 15, 10]
 function postOrderTraverse(tree, array) {
