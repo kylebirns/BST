@@ -9,8 +9,12 @@ class BST{
 		this.value = value
 		this.left = null
 		this.right = null
+		this.children = []
 	}
 	insert(value){
+	...
+	}
+	addChild(value){
 	...
 	}
 }
@@ -73,3 +77,22 @@ function postOrderTraverse(tree, array) {
 }
 ```
 
+## Breadth First Search
+
+For breadth first search we want to use a queue (FIFO).
+
+```javascript
+//returns [10, 5, 15, 2, 5, 22, 1]
+breadthFirstSearch(array) {
+		let queue = [this]
+		while (queue.length){
+			let currentNode = queue.shift()
+			array.push(currentNode.value)
+			currentNode.children.forEach(child => {
+				queue.push(child)
+			})
+		}
+		return array
+  }
+}
+```
