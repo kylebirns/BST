@@ -3,6 +3,9 @@ Practice with Traversing BST
 
 Below are javascript implementations of Depth-First-Search (inorder, preorder, and postorder)
 
+## Depth First Search
+
+```
 Example Tree:
         10
         / \
@@ -11,8 +14,11 @@ Example Tree:
      2   5    22
     /
    1
+```
 
-returns [1, 2, 5, 5, 10, 15, 22]
+## Inorder
+```javascript
+//returns [1, 2, 5, 5, 10, 15, 22]
 function inOrderTraverse(tree, array) {
 	if(tree){
 		inOrderTraverse(tree.left, array)
@@ -21,8 +27,11 @@ function inOrderTraverse(tree, array) {
 	}
 	return array
 }
+```
 
-returns [10, 5, 2, 1, 5, 15, 22]
+## Preorder
+```javascript
+//returns [10, 5, 2, 1, 5, 15, 22]
 function preOrderTraverse(tree, array) {
 	if(tree){
 		array.push(tree.value)
@@ -31,8 +40,11 @@ function preOrderTraverse(tree, array) {
 	}
 	return array
 }
+```
 
-returns [1, 2, 5, 5, 22, 15, 10]
+## Postorder
+```javascript
+//returns [1, 2, 5, 5, 22, 15, 10]
 function postOrderTraverse(tree, array) {
 	if(tree){
 		postOrderTraverse(tree.left, array)
@@ -41,4 +53,5 @@ function postOrderTraverse(tree, array) {
 	}
 	return array
 }
+```
 
