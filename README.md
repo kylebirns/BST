@@ -36,7 +36,7 @@ Example Tree:
    1
 ```
 
-For depth first search we can use the call stack (recursion) or the stack ADT (LIFO). You can use an isVisited flag so that you do not end up in an infinite loop.
+For depth first search we can use the call stack (recursion) or the stack ADT (LIFO). You can use an isVisited flag so that you do not end up in an infinite loop. Depth-first also will reach leaves faster, which allows us to short-circuit earlier in some cases.
 
 ### Inorder
 ```javascript
@@ -79,7 +79,7 @@ function postOrderTraverse(tree, array) {
 
 ## Breadth First Search
 
-For breadth first search we want to use a queue (FIFO).
+For breadth first search we want to use a queue (FIFO). A BFS will find the shortest path between the starting point and any other reachable node. A BFS on a binary tree generally requires more memory than a DFS.
 
 ```javascript
 //returns [10, 5, 15, 2, 5, 22, 1]
