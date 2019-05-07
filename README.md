@@ -1,6 +1,22 @@
 # BST
 Practice with Traversing BST
 
+## Basic BST Class
+
+```javascript
+class BST{
+	constructor(value){
+		this.value = value
+		this.left = null
+		this.right = null
+	}
+	insert(value){
+	...
+	}
+}
+
+```
+
 Below are javascript implementations of Depth-First-Search (inorder, preorder, and postorder)
 
 ## Depth First Search
@@ -15,6 +31,8 @@ Example Tree:
     /
    1
 ```
+
+For depth first search we can use the call stack (recursion) or the stack ADT (LIFO). You can use an isVisited flag so that you do not end up in an infinite loop.
 
 ## Inorder
 ```javascript
