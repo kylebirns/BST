@@ -81,6 +81,7 @@ function postOrderTraverse(tree, array) {
 
 For breadth first search we want to use a queue (FIFO). A BFS will find the shortest path between the starting point and any other reachable node. A BFS on a binary tree generally requires more memory than a DFS.
 
+### Given an Array
 ```javascript
 //returns [10, 5, 15, 2, 5, 22, 1]
 breadthFirstSearch(array) {
@@ -94,5 +95,20 @@ breadthFirstSearch(array) {
 		}
 		return array
   }
+```
+
+### Given a Root Node
+```javascript
+const breadthFirstRoot = function(root) {
+    let queue = [root]
+    let BFS = []
+    if(root === null) return BFS
+    while (queue.length){
+        let current = queue.shift()
+        BFS.push(current.val)
+        current.left ? queue.push(current.left) : null
+        current.right ? queue.push(current.right) : null
+    }
+    return BFS
 }
 ```
