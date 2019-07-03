@@ -1,5 +1,5 @@
 # BST
-Practice with Traversing BST
+Practice with Traversing BST - Depth and Breadth Searching
 
 ## Basic BST Class
 
